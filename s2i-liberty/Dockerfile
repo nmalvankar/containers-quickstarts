@@ -25,7 +25,6 @@ ENV STI_SCRIPTS_PATH="/usr/local/s2i" \
 # Copy the S2I scripts from the specific language image to $STI_SCRIPTS_PATH
 COPY ./s2i/bin/ $STI_SCRIPTS_PATH 
 
-
 RUN useradd -u 1001 -r -g 0 -s /sbin/nologin \
       -c "Default Application User" default && \
     chown -R 1001:0 /config && \
@@ -44,6 +43,7 @@ RUN useradd -u 1001 -r -g 0 -s /sbin/nologin \
 
 COPY ./placeholder.txt $WORKDIR/artifacts 
 COPY ./placeholder.txt $WORKDIR/config 
+COPY server.xml $WORKDIR/config
 
 WORKDIR $WORKDIR
 
