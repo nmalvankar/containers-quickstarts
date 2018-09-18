@@ -43,7 +43,7 @@ RUN useradd -u 1001 -r -g 0 -s /sbin/nologin \
 
 COPY ./placeholder.txt $WORKDIR/artifacts 
 COPY ./placeholder.txt $WORKDIR/config 
-COPY server.xml /opt/ibm/wlp/usr/servers/defaultServer
+# COPY server.xml /opt/ibm/wlp/usr/servers/defaultServer
 
 WORKDIR $WORKDIR
 
