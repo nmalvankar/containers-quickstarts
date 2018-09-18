@@ -4,6 +4,6 @@ items:
 - kind: ProjectRequest
   apiVersion: v1
   metadata:
-    name: liberty-demo
+    name: nm-liberty-demo
     creationTimestam: null
   displayName: Liberty Demo
